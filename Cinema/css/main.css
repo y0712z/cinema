@@ -175,6 +175,10 @@ nav a:active, .footer-links a:active {
     white-space:nowrap;
 }
 
+.yellowbox {
+        display:inline-flex; background-color:#E6B66C; align-items:center; text-align:center; padding:15px 25px; gap:8px;
+        color:black; font-size:1em; font-weight:600; border-radius:15px; margin-bottom:10px; 
+    }
 
 .signupbox {
         background-color:#E6B66C; 

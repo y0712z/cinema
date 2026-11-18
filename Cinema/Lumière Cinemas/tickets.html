@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumière Cinema</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/tickets.css">
+    <script src="..//JavaScript/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <button id="menu-toggle" type="button" 
+                aria-label="Toggle menu"
+                aria-controls="sidebar"
+                aria-expanded="false">
+            <span class="hamburger"></span>
+        </button>
+    </header>
+
+<!--menu navigation-->
+    <nav class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="movies.html">MOVIES</a></li>
+            <li><a href="halls.html">OUR HALLS</a></li> 
+            <li><a href="food.html">FOOD & DRINKS</a></li>
+            <li><a href="cart.html">CART</a></li>
+            <li><a href="team.html">OUR TEAM</a></li>
+        </ul> 
+    </nav>
+    
+    <!--navigation bar-->
+     <nav class="navbar">
+        <ul>
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="movies.html">MOVIES</a></li>
+            <li><a href="halls.html">OUR HALLS</a></li> 
+            <li><a href="food.html">FOOD & DRINKS</a></li>
+        </ul> 
+    </nav>
+
+     <hr>
+
+    <main class="page">
+        <h1>Choose Tickets</h1>
+        <p class="subtitle">Movie name | Hall name </p> <!-- javascript -->
+        <div class="date-showtime">
+            <div>
+                <h2 class="label">DATE</h2>
+                <p class="btn">15 Nov</p> <!--change to javascript for current date-->
+            </div>
+            
+            <div>
+                <h2 class="label">SHOWTIME</h2>
+                <p class="btn">8:30 PM</p> <!--change to javascript for current time-->
+            </div>   
+        </div>
+        <h2 class="label">Ticket Type</h2>
+
+        <div class="ticket">
+            <div class="ticket-info">
+                <h3>Child</h3>
+                <p>Ages 3 to 12</p>
+                <span class="price">RM 20.00</span>
+            </div>
+            <div class="counter">
+                <button class="counter minus">-</button>
+                <span class="qty">0</span>
+                <button class="counter plus">+</button>
+            </div>
+        </div>
+
+        <div class="ticket">
+            <div class="ticket-info">
+                <h3>Adult</h3>
+                <p>Ages 13 and above</p>
+                <span class="price">RM 28.00</span>
+            </div>
+            <div class="counter">
+                <button class="counter minus">-</button>
+                <span class="qty">0</span>
+                <button class="counter plus">+</button>
+            </div>
+        </div>
+
+        <div class="ticket">
+            <div class="ticket-info">
+                <h3>Senior</h3>
+                <p>Ages 60 and above</p>
+                <span class="price">RM 20.00</span>
+            </div>
+            <div class="counter">
+                <button class="counter minus">-</button>
+                <span class="qty">0</span>
+                <button class="counter plus">+</button>
+            </div>
+        </div>
+
+        <div class="ticket">
+            <div class="ticket-info">
+                <h3>Student</h3>
+                <p>Valid student ID (Sunway, Monash, Taylor's etc.)</p>
+                <span class="price">RM 24.00</span>
+            </div>
+            <div class="counter">
+                <button class="counter minus">-</button>
+                <span class="qty">0</span>
+                <button class="counter plus">+</button>
+            </div>
+        </div>
+    </main>
+
+    <div class="summary-bar">
+        <div class="summary-content">
+            <div class="summary-text">
+                <p><span id="ticket-count">0</span> tickets | Seats C5, C6</p> <!--javascript for seats-->
+                <strong id="total">RM 0.00</strong>
+            </div>
+            <a href="food.html" class="summary-btn">Add Food & Drinks</a>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,169 @@
+
+/*ticket page*/
+.page {
+    width:100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px 10px 130px; 
+    box-sizing: border-box;     /* bottom space so the fixed bar never covers content */
+    font-family: Arial;
+    color: white;
+}
+
+.page h1 {
+    font-size: 2em;
+    margin: 0 0 15px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #9e9489;
+  margin-bottom: 20px;
+}
+
+.label {
+    color: #B7B1BD;
+    font-size: 0.95em;
+    letter-spacing: 0.5px;
+    margin: 0 0 5px;
+}
+
+/* date n showtime */
+.date-showtime {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin: 0 0 10px;
+    flex-wrap: wrap;
+}
+.btn {
+    width: 110px;
+    background-color: #E6B66C;
+    border-color: #E6B66C;
+    color: black;
+    border: none;
+    border-radius: 15px;
+    padding: 15px 15px;
+    font-family: Arial;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom:10px;
+}
+
+/* ticket*/
+
+.ticket {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1b1b25;
+    border-radius: 15px;
+    padding: 20px 25px;
+    margin-bottom: 15px;
+}
+
+.ticket-info h3 {
+    margin: 0 0 10px;
+    font-size: 1.1em;
+}
+
+.ticket-info p {
+    margin: 0 0 10px;
+    color: #B7B1BD;
+    font-size: 0.85em;
+}
+
+.price {
+    color: #E6B66C;
+    font-weight: bold;
+    font-size: 0.95em;
+}
+
+/* quantity */
+
+.counter {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.counter button {
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.3em;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.counter .minus {
+    background-color: #2a2a38;
+    color: white;
+}
+
+.counter .plus {
+    background-color: #E6B66C;
+    color: black;
+}
+
+.counter button:hover {
+    opacity: 50%;
+}
+
+.qty {
+    min-width: 20px;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+/*summary */
+
+.summary-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #12121b;
+    border-top: 1px solid #fdfcfc33;
+    font-family: Arial;
+}
+
+.summary-content {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.summary-text p {
+    margin: 0 0 8px;
+    color: #B7B1BD;
+    font-size: 0.85em;
+}
+
+.summary-text strong {
+    color: #E6B66C;
+    font-size: 1.4em;
+}
+
+.summary-btn {
+    background-color: #E6B66C;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 12px;
+    padding: 20px 30px;
+    text-align: center;
+}
+
+.summary-btn:hover {
+    background-color: #B94753;
+    color: white;
+}
+

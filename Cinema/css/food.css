@@ -97,6 +97,22 @@ main h1 {
     align-items: center;
 }
 
+.item-bottom .yellowbox {
+    background-color: #E6B66C;
+    color: #000000;
+    padding: 10px 18px;
+    font-size: 15px;
+    border: 1px solid #E6B66C;
+    border-radius: 30px;
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+.item-bottom .yellowbox:hover {
+    background-color: #B94753;
+    color: #ffffff;
+}
+
 .price {
     font-size: 20px;
     font-weight: bold;
@@ -151,7 +167,7 @@ main h1 {
     margin-bottom: 0;
 }
 
-main .yellowbox:hover {
+.item .yellowbox:hover {
     background-color: #B94753;
     color: #ffffff;
 }

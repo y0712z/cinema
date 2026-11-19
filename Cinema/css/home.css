@@ -1,66 +1,170 @@
-.box{
-        background-color:#1E3A5F;
-        margin-top:20px;  
-        width:370x; 
-        height:230px;
-        border-radius:15px; 
-}
-p.yellow{
-        font-family:Arial; 
-        color:#E6B66C; 
-        padding-top:6px;}
-p.tagline{
-        color:white; 
-        font-size:2em; 
-        margin-top:0; 
-        margin-bottom:0;}
-p.grey{
-        font-family:Arial; 
-        color:#B7B1BD;
-        line-height:1.4; 
-        font-size:1em;
-        margin-bottom:1.5em;}
+/*      TABLE OF CONTENTS
+    Mobile-first Approach
+    1. Box and Text
+    2. Buttons
+    3. Tablet (min-width: 768px)
+    4. Desktop (min-width: 1024px)
+*/
 
-.button{
-        display:flex;
-        flex-direction:row;
-        justify-content:center;
-        gap:15px;
-        font-family:Arial;
-        font-size:1em;
+/*
+    1. Box and Text (mobile = base)
+
+*/
+
+.box {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 370px;
+        min-height: 230px;
+        margin-top: 20px;
+        padding: 1em;     
+        
+        background-color: #1E3A5F;
+        border-radius: 15px; 
 }
 
-.button a{
-        text-decoration:none;
+p.yellow {
+        padding-top: 6px;
+        font-family: Arial, sans-serif; 
+        color: #E6B66C; 
 }
 
-.yellow-box, .transparent-box{ 
-        display:flex; 
-        justify-content:center; 
-        align-items:center;
-        text-align:center; 
-
-        padding:10px;
-        box-sizing:border-box;
-        border-radius:15px; 
-        margin:0;
-        width:180px; 
-        min-height:50px; 
+p.tagline {
+        margin-top: 0; 
+        margin-bottom: 0;
+        color: white; 
+        font-size: 2em; 
 }
 
-.yellow-box{
-        background-color:#E6B66C;
+p.grey {
+        margin-bottom: 1.5em;
+        font-family: Arial, sans-serif;
+        font-size: 1em; 
+        line-height: 1.4; 
+        color: #B7B1BD;
+}
+
+
+
+/*
+    2. Buttons
+
+*/
+
+.button {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+
+        font-family: Arial, sans-serif;
+        font-size: 1em;
+}
+
+.button a {
+        text-decoration: none;
+}
+
+.yellow-box, 
+.transparent-box { 
+        display: flex; 
+        justify-content: center; 
+        align-items: center;
+
+        width: 180px; 
+        min-height: 50px; 
+        margin: 0;
+        padding: 10px;
+        box-sizing: border-box;
+
+        text-align: center; 
+        border-radius: 15px; 
+}
+
+.yellow-box {
+        background-color: #E6B66C;
 }
 
 .yellow-box a {
-        color:black;
-        font-weight:600; 
+        color: black;
+        font-weight: 600; 
 }
 
 .transparent-box { 
-        border:2px solid #E6B66C; 
+        border: 2px solid #E6B66C; 
 }
 
 .transparent-box a {
-        color:white;
+        color: white;
+}
+
+/*
+    3. Tablet (768px and up)
+
+*/
+
+@media (min-width:768px) {
+
+        .box {
+                max-width: 560px;
+                min-height: 300px;
+                margin: 20px auto 0;
+                padding: 1.5em;
+        }
+
+        p.yellow {
+                padding-top: 30px;
+        }
+
+        p.tagline {
+                font-size: 3em;
+        }
+
+        p.grey {
+                font-size: 1.1em;
+                line-height: 1.5;
+                margin-bottom: 1.5em;
+        }
+}
+
+/*
+    4. Desktop and Laptop (1024px and up)
+
+*/
+
+@media (min-width:1024px) {
+
+        .box {
+                float: right;
+                width: 650px;
+                max-width: none;
+                min-height: 400px;
+                margin: -180px 30px 100px 10px;
+        }
+
+        p.yellow {
+                padding-top: 50px;
+        }
+
+        p.tagline {
+                font-size: 4em;
+        }
+
+        p.grey {
+                font-size: 1.2em;
+                line-height: 1.5;
+                margin-bottom: 2em;
+        }
+
+        .button {
+                justify-content: flex-start;
+                gap: 20px;
+        }
+
+        .yellow-box,
+        .transparent-box {
+                width: 190px;
+                font-size: 1.1em;
+                padding: 15px 30px;
+        }
 }

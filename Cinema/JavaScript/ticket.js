@@ -12,24 +12,37 @@ function counter(node, min, max, initial) {
 
     qty.textContent = count;
 
+    //decrease qty
     minusBtn.addEventListener("click", function () {
-        count = ((count - 1) < min) ? min : (count - 1);
+        if (count - 1 < min) {
+            count = min;
+        }
+        else {
+            count -= 1;
+        }
         qty.textContent = count;
         updateSummary();
     });
 
-    plusBtn.addEventListener("click", function () {
-        count = ((count + 1) > max) ? max : (count + 1);
-        qty.textContent = count;
-        updateSummary();
-    });
+    //increase qty
+   plusBtn.addEventListener("click", function () {
+    if (count + 1> max) {
+        count = max;
+    }
+    else {
+        count += 1;
+    }
+    qty.textContent = count;
+    updateSummary();
+   });
 }
 
 function updateSummary() {
     let count = 0;
     let total = 0;
-    orderList.innerHTML = "";
+    orderList.innerHTML = ""; //clear previous order summary
 
+    //calc qty and ticket price
     tickets.forEach(function(ticket) {
         let qty = Number(ticket.querySelector(".qty").textContent);
         let price = Number(ticket.querySelector(".price").textContent.replace("RM", ""));
@@ -37,6 +50,7 @@ function updateSummary() {
         count += qty;
         total += qty * price;
 
+        //display selected tickets
         if (qty > 0) {
             let li = document.createElement("li");
             li.textContent = ticket.querySelector("h3").textContent + " x" + qty + " - RM " + (qty * price).toFixed(2);
@@ -44,7 +58,7 @@ function updateSummary() {
         }
     });
 
-    if (count === 0) {
+    if (count == 0) {
         orderList.textContent = "No tickets selected";
     }
 
@@ -52,6 +66,7 @@ function updateSummary() {
     totalPrice.textContent = "RM " + total.toFixed(2);
 }
 
+//select and activate al ticket counters
 const counters = document.querySelectorAll(".counter");
 
 counters.forEach(function(node) {
@@ -59,6 +74,3 @@ counters.forEach(function(node) {
 });
 
 updateSummary();
-
-
-

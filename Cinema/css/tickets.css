@@ -1,10 +1,9 @@
-
 /*ticket page*/
 .page {
     width:100%;
     max-width: 767px;
     margin: 0 auto;
-    padding: 30px 10px 130px; 
+    padding: 30px 10px 160px; 
     box-sizing: border-box;     /* bottom space so the fixed bar never covers content */
     font-family: Arial;
     color: white;
@@ -52,7 +51,6 @@
 }
 
 /* ticket*/
-
 .ticket {
     display: flex;
     justify-content: space-between;
@@ -81,7 +79,6 @@
 }
 
 /* quantity */
-
 .counter {
     display: flex;
     align-items: center;
@@ -119,8 +116,7 @@
     font-weight: bold;
 }
 
-/*summary */
-
+/*mobile/tablet summary bar */
 .summary-bar {
     position: fixed;
     bottom: 0;
@@ -167,3 +163,114 @@
     color: white;
 }
 
+.summary-extra {
+    display: none;
+}
+
+.summary-movie {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.summary-poster {
+    width: 110px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    align-self: flex-start;
+}
+
+.summary-details h3 {
+    margin: 0 0 10px;
+    font-size: 1.2em;
+    color: white;
+}
+
+.summary-details p {
+    margin: 0 0 8px;
+    color: #B7B1BD;
+    font-size: 0.9em;
+}
+
+.summary-details span {
+    color: #E6B66C;
+    font-weight: bold;
+}
+
+.summary-heading {
+    margin: 0 0 10px;
+    color: #B7B1BD;
+    font-size: 0.85em;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.skip {
+    color:#B7B1BD;
+    font-size: 0.85em;
+    text-decoration: none;
+}
+
+.skip:hover {
+    color:#E6B66C
+}
+/* desktop ver */
+
+@media (min-width: 1025px) {
+
+    .booking-layout {
+        display: grid;
+        grid-template-columns: 1fr 360px;
+        gap: 30px;
+        align-items: flex-start;
+    }
+
+    .page {
+        max-width: none;
+        margin: 0;
+        padding-bottom: 30px;    
+    }  
+
+    .summary-bar {
+        position: sticky;          
+        top: 20px;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        margin-top: 30px;
+        background-color: #1b1b25;
+        border: 1px solid #fdfcfc33;
+        border-radius: 20px;
+    }
+
+    .summary-content {
+        max-width: none;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 25px;
+        gap: 20px;
+    }
+
+    .summary-extra {
+        display: block;
+    }
+
+    .summary-line {
+        display: none;           
+    }
+
+    .summary-text {
+        border-top: 1px solid #fdfcfc33;
+        padding-top: 20px;
+    }
+
+    .summary-text strong {
+        font-size: 1.6em;
+    }
+
+    .summary-btn {
+        display: block;
+    }
+}

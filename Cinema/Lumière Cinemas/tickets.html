@@ -44,83 +44,102 @@
 
      <hr>
 
-    <main class="page">
-        <h1>Choose Tickets</h1>
-        <p class="subtitle">Movie name | Hall name </p> <!-- javascript -->
-        <div class="date-showtime">
-            <div>
-                <h2 class="label">DATE</h2>
-                <p class="btn">15 Nov</p> <!--change to javascript for current date-->
-            </div>
-            
-            <div>
-                <h2 class="label">SHOWTIME</h2>
-                <p class="btn">8:30 PM</p> <!--change to javascript for current time-->
-            </div>   
-        </div>
-        <h2 class="label">Ticket Type</h2>
+    <!--wrap tickets and summary -->
+    <div class="booking-layout">
 
-        <div class="ticket">
-            <div class="ticket-info">
-                <h3>Child</h3>
-                <p>Ages 3 to 12</p>
-                <span class="price">RM 20.00</span>
+        <main class="page">
+            <h1>Choose Tickets</h1>
+            <p class="subtitle">Movie name | Hall name </p> <!-- javascript -->
+            <div class="date-showtime">
+                <div>
+                    <h2 class="label">DATE</h2>
+                    <p class="btn">15 Nov</p> <!--change to javascript for current date-->
+                </div>
+                
+                <div>
+                    <h2 class="label">SHOWTIME</h2>
+                    <p class="btn">8:30 PM</p> <!--change to javascript for current time-->
+                </div>   
             </div>
-            <div class="counter">
-                <button class="counter minus">-</button>
-                <span class="qty">0</span>
-                <button class="counter plus">+</button>
+            <h2 class="label">Ticket Type</h2>
+
+            <div class="ticket">
+                <div class="ticket-info">
+                    <h3>Child</h3>
+                    <p>Ages 3 to 12</p>
+                    <span class="price">RM 20.00</span>
+                </div>
+                <div class="counter">
+                    <button class="counter minus">-</button>
+                    <span class="qty">0</span>
+                    <button class="counter plus">+</button>
+                </div>
+            </div>
+
+            <div class="ticket">
+                <div class="ticket-info">
+                    <h3>Adult</h3>
+                    <p>Ages 13 and above</p>
+                    <span class="price">RM 28.00</span>
+                </div>
+                <div class="counter">
+                    <button class="counter minus">-</button>
+                    <span class="qty">0</span>
+                    <button class="counter plus">+</button>
+                </div>
+            </div>
+
+            <div class="ticket">
+                <div class="ticket-info">
+                    <h3>Senior</h3>
+                    <p>Ages 60 and above</p>
+                    <span class="price">RM 20.00</span>
+                </div>
+                <div class="counter">
+                    <button class="counter minus">-</button>
+                    <span class="qty">0</span>
+                    <button class="counter plus">+</button>
+                </div>
+            </div>
+
+            <div class="ticket">
+                <div class="ticket-info">
+                    <h3>Student</h3>
+                    <p>Valid student ID (Sunway, Monash, Taylor's etc.)</p>
+                    <span class="price">RM 24.00</span>
+                </div>
+                <div class="counter">
+                    <button class="counter minus">-</button>
+                    <span class="qty">0</span>
+                    <button class="counter plus">+</button>
+                </div>
+            </div>
+        </main>
+
+        <div class="summary-bar">
+            <div class="summary-content">
+
+                <!-- only on desktop -->
+                <div class="summary-extra">
+                    <div class="summary-movie">
+                        <img src="../Images/Posters/movie-poster.jpg" alt="Movie poster" class="summary-poster"> <!--change to javascript-->
+                        <div class="summary-details">
+                            <h3 id="summary-movie">Movie name</h3>
+                            <p id="summary-hall">Hall name</p>
+                            <p>Seats: <span id="summary-seats">C5, C6</span></p> <!--javascript for seats-->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="summary-text">
+                    <p class="summary-line"><span id="ticket-count">0</span> tickets | Seats C5, C6</p> <!--javascript for seats-->
+                    <strong id="total">RM 0.00</strong>
+                </div>
+                <a href="food.html" class="summary-btn">Add Food & Drinks</a>
+                <a href="payment.html" class="skip"> Skip to payment</a>
             </div>
         </div>
 
-        <div class="ticket">
-            <div class="ticket-info">
-                <h3>Adult</h3>
-                <p>Ages 13 and above</p>
-                <span class="price">RM 28.00</span>
-            </div>
-            <div class="counter">
-                <button class="counter minus">-</button>
-                <span class="qty">0</span>
-                <button class="counter plus">+</button>
-            </div>
-        </div>
-
-        <div class="ticket">
-            <div class="ticket-info">
-                <h3>Senior</h3>
-                <p>Ages 60 and above</p>
-                <span class="price">RM 20.00</span>
-            </div>
-            <div class="counter">
-                <button class="counter minus">-</button>
-                <span class="qty">0</span>
-                <button class="counter plus">+</button>
-            </div>
-        </div>
-
-        <div class="ticket">
-            <div class="ticket-info">
-                <h3>Student</h3>
-                <p>Valid student ID (Sunway, Monash, Taylor's etc.)</p>
-                <span class="price">RM 24.00</span>
-            </div>
-            <div class="counter">
-                <button class="counter minus">-</button>
-                <span class="qty">0</span>
-                <button class="counter plus">+</button>
-            </div>
-        </div>
-    </main>
-
-    <div class="summary-bar">
-        <div class="summary-content">
-            <div class="summary-text">
-                <p><span id="ticket-count">0</span> tickets | Seats C5, C6</p> <!--javascript for seats-->
-                <strong id="total">RM 0.00</strong>
-            </div>
-            <a href="food.html" class="summary-btn">Add Food & Drinks</a>
-        </div>
     </div>
 
 </body>

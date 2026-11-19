@@ -273,4 +273,26 @@
     .summary-btn {
         display: block;
     }
+
+    .order-summary h3{
+         margin: 0 0 10px;
+        font-size: 1.2em;
+        color: white;
+    }
+
+    .order-summary ul {
+        list-style-type: none;
+        color:#B7B1BD;
+        padding-left: 0;
+    }
+
+    .order-summary li{
+        margin: 0 0 8px;
+        color: #B7B1BD;
+        font-size: 0.9em;
+        display: flex;
+        justify-content: space-between;
+    }
+        
+    
 }

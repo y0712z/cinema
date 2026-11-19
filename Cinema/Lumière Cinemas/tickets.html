@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/tickets.css">
     <script src="..//JavaScript/main.js" defer></script>
+    <script src="..//JavaScript/ticket.js" defer></script>
 </head>
 <body>
     <header>
@@ -70,9 +71,9 @@
                     <span class="price">RM 20.00</span>
                 </div>
                 <div class="counter">
-                    <button class="counter minus">-</button>
+                    <button class="minus">-</button>
                     <span class="qty">0</span>
-                    <button class="counter plus">+</button>
+                    <button class="plus">+</button>
                 </div>
             </div>
 
@@ -83,9 +84,9 @@
                     <span class="price">RM 28.00</span>
                 </div>
                 <div class="counter">
-                    <button class="counter minus">-</button>
+                    <button class="minus">-</button>
                     <span class="qty">0</span>
-                    <button class="counter plus">+</button>
+                    <button class="plus">+</button>
                 </div>
             </div>
 
@@ -96,9 +97,9 @@
                     <span class="price">RM 20.00</span>
                 </div>
                 <div class="counter">
-                    <button class="counter minus">-</button>
+                    <button class="minus">-</button>
                     <span class="qty">0</span>
-                    <button class="counter plus">+</button>
+                    <button class="plus">+</button>
                 </div>
             </div>
 
@@ -109,9 +110,9 @@
                     <span class="price">RM 24.00</span>
                 </div>
                 <div class="counter">
-                    <button class="counter minus">-</button>
+                    <button class="minus">-</button>
                     <span class="qty">0</span>
-                    <button class="counter plus">+</button>
+                    <button class="plus">+</button>
                 </div>
             </div>
         </main>
@@ -128,6 +129,13 @@
                             <p id="summary-hall">Hall name</p>
                             <p>Seats: <span id="summary-seats">C5, C6</span></p> <!--javascript for seats-->
                         </div>
+                    </div>
+
+                    <div class = "order-summary">
+                        <h3>Order Summary</h3>
+                        <ul id="order-items">
+                            <li> No tickets selected</li>
+                        </ul>
                     </div>
                 </div>
 

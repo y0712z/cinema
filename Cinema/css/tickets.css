@@ -1,12 +1,24 @@
+:root{
+    --min: #2a2a38;
+    --min-text: white;
+    color-scheme: dark;
+}
+
+:root[data-theme="light"]{
+    --min:#afa79b;
+    --min-text: black;
+    color-scheme: light;
+}
+
 /*ticket page*/
 .page {
     width:100%;
     max-width: 767px;
     margin: 0 auto;
     padding: 5px 10px 130px; 
-    box-sizing: border-box;     /* bottom space so the fixed bar never covers content */
+    box-sizing: border-box;     
     font-family: Arial;
-    color: white;
+    color: var(--text);
 }
 
 .page h1 {
@@ -21,7 +33,7 @@
 }
 
 .label {
-    color: #B7B1BD;
+    color: var(--muted);
     font-size: 0.95em;
     letter-spacing: 0.5px;
     margin: 0 0 5px;
@@ -37,9 +49,9 @@
 }
 .btn {
     width: 110px;
-    background-color: #E6B66C;
-    border-color: #E6B66C;
-    color: black;
+    background-color: var(--gold);
+    border-color: var(--gold);
+    color: var(--gold-ink);
     border: none;
     border-radius: 15px;
     padding: 15px 15px;
@@ -55,7 +67,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #1b1b25;
+    background-color: var(--surface);
     border-radius: 15px;
     padding: 20px 25px;
     margin-bottom: 15px;
@@ -68,12 +80,12 @@
 
 .ticket-info p {
     margin: 0 0 10px;
-    color: #B7B1BD;
+    color: var(--muted);
     font-size: 0.85em;
 }
 
 .price {
-    color: #E6B66C;
+    color: var(--gold-text);
     font-weight: bold;
     font-size: 0.95em;
 }
@@ -96,12 +108,12 @@
 }
 
 .counter .minus {
-    background-color: #2a2a38;
-    color: white;
+    background-color: var(--min);
+    color: var(--min-text);
 }
 
 .counter .plus {
-    background-color: #E6B66C;
+    background-color: var(--gold);
     color: black;
 }
 
@@ -122,8 +134,8 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #12121b;
-    border-top: 1px solid #fdfcfc33;
+    background-color: var(--bg);
+    border-top: 1px solid var(--line);
     font-family: Arial;
 }
 
@@ -139,18 +151,18 @@
 
 .summary-text p {
     margin: 0 0 8px;
-    color: #B7B1BD;
+    color: var(--muted);
     font-size: 0.85em;
 }
 
 .summary-text strong {
-    color: #E6B66C;
+    color: var(--gold-text);
     font-size: 1.4em;
 }
 
 .summary-btn {
-    background-color: #E6B66C;
-    color: black;
+    background-color: var(--gold);
+    color: var(--gold-ink);
     text-decoration: none;
     font-weight: bold;
     border-radius: 12px;
@@ -159,7 +171,7 @@
 }
 
 .summary-btn:hover {
-    background-color: #B94753;
+    background-color: var(--red);
     color: white;
 }
 
@@ -184,23 +196,23 @@
 .summary-details h3 {
     margin: 0 0 10px;
     font-size: 1.2em;
-    color: white;
+    color: var(--text);
 }
 
 .summary-details p {
     margin: 0 0 8px;
-    color: #B7B1BD;
+    color: var(--muted);
     font-size: 0.9em;
 }
 
 .summary-details span {
-    color: #E6B66C;
+    color: var(--gold-text);
     font-weight: bold;
 }
 
 .summary-heading {
     margin: 0 0 10px;
-    color: #B7B1BD;
+    color: var(--muted);
     font-size: 0.85em;
     font-weight: normal;
     text-transform: uppercase;
@@ -208,13 +220,13 @@
 }
 
 .skip {
-    color:#B7B1BD;
+    color:var(--muted);
     font-size: 0.85em;
     text-decoration: none;
 }
 
 .skip:hover {
-    color:#E6B66C
+    color:var(--gold)
 }
 
 footer {
@@ -245,7 +257,7 @@ footer {
         left: auto;
         right: auto;
         margin-top: 30px;
-        background-color: #1b1b25;
+        background-color: var(--surface);
         border: 1px solid #fdfcfc33;
         border-radius: 20px;
     }
@@ -267,7 +279,7 @@ footer {
     }
 
     .summary-text {
-        border-top: 1px solid #fdfcfc33;
+        border-top: 1px solid var(--muted);
         padding-top: 20px;
     }
 
@@ -282,18 +294,18 @@ footer {
     .order-summary h3{
          margin: 0 0 10px;
         font-size: 1.2em;
-        color: white;
+        color: var(--text);
     }
 
     .order-summary ul {
         list-style-type: none;
-        color:#B7B1BD;
+        color:var(--muted);
         padding-left: 0;
     }
 
     .order-summary li{
         margin: 0 0 8px;
-        color: #B7B1BD;
+        color: var(--muted);
         font-size: 0.9em;
         display: flex;
         justify-content: space-between;

@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".theme-toggle").forEach(function (btn) {
     btn.addEventListener("click", function () {
-      const next = document.documentElement.dataset.theme == "dark" ? "light" : "dark";
+      const next = document.documentElement.dataset.theme == "light" ? "dark" : "light";
       document.documentElement.dataset.theme = next;
       localStorage.setItem("theme", next);
     });

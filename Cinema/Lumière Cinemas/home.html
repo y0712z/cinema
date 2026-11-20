@@ -10,13 +10,18 @@
     <script src="..//JavaScript/main.js" defer></script>
 </head>
 <body>
-    <header>
+   <header>
+        <!-- menu button for mobile -->
         <button id="menu-toggle" type="button" 
                 aria-label="Toggle menu"
                 aria-controls="sidebar"
                 aria-expanded="false">
             <span class="hamburger"></span>
         </button>
+
+        <!-- theme toggle for desktop -->
+        <button class = "theme-toggle header-theme-toggle" type="button"
+            aria-label="Toggle dark/light mode"></button>
 
         <a href="contact.html" class="signupbox signup">SIGN UP</a>
     </header>
@@ -33,7 +38,7 @@
             <div class="theme-container">
                 <li><p class="theme-label">THEME: </p></li>
                 <li><button class="theme-toggle" type="button" 
-                aria-label="Toggle dark/light mode"></button>
+                aria-label="Toggle dark/light mode"></button></li>
             </div>
         </ul> 
     </nav>

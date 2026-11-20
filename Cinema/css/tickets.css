@@ -4,7 +4,7 @@
     width:100%;
     max-width: 767px;
     margin: 0 auto;
-    padding: 30px 10px 130px; 
+    padding: 5px 10px 130px; 
     box-sizing: border-box;     /* bottom space so the fixed bar never covers content */
     font-family: Arial;
     color: white;

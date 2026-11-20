@@ -14,14 +14,51 @@
 
 */
 
+/* Dark Theme (Default) */
 :root {
     --bg: #101018;
+    --surface: #1A1A1A;
     --gold: #E6B66C;
-    --red: #b94753;
-    --muted: #b7b1bd;
+    --gold-ink: black;
+    --text: #F7F4EF;
+    --red: #B94753;
+    --muted: #B7B1Bd;
     --line: rgba(253, 252, 252, 0.252);
     --header-h:90px;
+    color-scheme: dark;
 }
+
+/* Light Theme when toggle sets it */
+:root[data-theme="light"]{
+    --bg: #F4E6C8;
+    --surface: 	#2E6460;
+    --gold: #D9A441;
+    --gold-ink: #241A1B;
+    --text: #1B1B24;
+    --muted: #241A1B;
+    --line: #241A1B; 
+    color-scheme: light;
+}
+
+/* Logo for light version */
+:root[data-theme="light"] header,
+:root[data-theme="light"] footer {
+    background-image: url("../Images/Logo and Icon/light_logo.svg");
+}
+
+/* toogle button */
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+/* toggle icon */
+.theme-toggle::before { content: "☀️"; }
+:root[data-theme="light"] .theme-toggle::before { content: "🌙"; }
 
 body {
     background-color: var(--bg);
@@ -151,7 +188,7 @@ nav ul {
 
 nav a {
     font-family: Arial, sans-serif;
-    color: white;
+    color: var(--text);
     text-decoration: none;
 }
 
@@ -160,7 +197,7 @@ nav a:link,
 nav a:visited,
 .footer-links a:link, 
 .footer-links a:visited {
-    color: white;
+    color: var(--text);
     text-decoration: none;
 }
 
@@ -231,7 +268,7 @@ hr{
     padding: 15px 20px;
 
     background-color: var(--gold); 
-    color: black; 
+    color: var(--gold-ink); 
     font-family: Arial, sans-serif;
     font-size: 1em; 
     font-weight: 600; 
@@ -321,7 +358,7 @@ footer {
     flex: 1; 
     min-width: 0;
     margin: 0;
-    color: white; 
+    color: var(--text); 
     text-align: left;
 }
 
@@ -359,66 +396,27 @@ footer {
 }
 
 /*
-    7. Tablet (768px and up)
+    7. Tablet (730px and up)
 
 */
 
-@media (min-width:768px) {
-
-    /* hide sidebar menu when there is enough space for navbar*/
-    #menu-toggle,
-    .sidebar {
-        display: none;
-    }
+@media (min-width:730px) {
 
     body {
         padding: 1em;
-        padding-top: 60px;
     }
 
-    /* header */
-    header {
-        border-bottom: 0.5px solid var(--line);
-        background-position: 20px center;
-        background-size: 150px auto;
-    }
-
-    /* navigation */
+    /* horizontal navigation bar */
     .navbar {
-     position: fixed;
-        top: 0;
-        left: 50%;
-        transform: translate(-50%);
-        z-index: 10001;   
-        
-        width: auto;
-        height: 90px;
-        min-height: 0;
-        margin: 0;
-        padding: 0;
-    }
-
-    .navbar,
-    .navbar ul {
-        gap: 15px;
+        margin-top: 10px;
     }
 
     .navbar li {
-        font-size: 13px;
+        font-size: 1.2em;
     }
 
     .navbar .add-nav {
         display: inline;
-    }
-
-    .signup, 
-    .signupbox {
-        margin-left: auto;
-        margin-right: 25px;
-        padding: 10px 25px 10px 42px;
-        background-size: 20px;
-        background-position: 15px center;
-        font-size: 1.1em;
     }
 
     hr {
@@ -431,10 +429,14 @@ footer {
         align-items: start;
         padding: 170px 30px 20px;
         text-align: left;
+        background-position: 10px 200px;
+        background-size: 270px auto;
     }
 
     .footer-links {
         grid-column: 1;
+        margin-top: 170px;
+        margin-left:-20px;
     }
 
     .footer-location {
@@ -442,9 +444,9 @@ footer {
     }
 
     .footer-location h4 {
-        text-align: left;
+        text-align: center;
     }
-
+   
     .location-list {
         flex-direction: row;
         flex-wrap: nowrap;
@@ -459,17 +461,24 @@ footer {
         text-align: left;
     }
 
+
     .copyright {
         margin: 0 -42px;
     }
 }
 
 /*
-    8. Desktop / Laptop (1024px and up)
+    8. Desktop / Laptop (1220px and up)
 
 */
 
-@media (min-width: 1024px) {
+@media (min-width: 1220px) {
+
+      /* hide sidebar menu when there is enough space for navbar*/
+    #menu-toggle,
+    .sidebar {
+        display: none;
+    }
 
     body {
         padding: 3em;
@@ -477,37 +486,65 @@ footer {
 
     /* header */
     header {
-        border-bottom: 0.5px solid var(--line);
         background-position: 20px 10px;
         background-size: 250px auto;
     }
 
     /* navigation */
     .navbar {
+     position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%);
+        z-index: 10001;   
+        
+        width: auto;
         height: 90px;
+        min-height: 0;
+        margin:0;
+        padding: 0;
     }
 
     .navbar,
     .navbar ul {
+        padding:5px 0 0 40px;
         gap: 30px;
     }
 
     .navbar li {
-        font-size: 1em;
+        font-size: 1.1em;
+    }
+
+    .navbar .add-nav {
+        display: inline;
     }
     
+    .signup,
+    .signupbox {
+        margin-left: auto;
+        margin-right: 25px;
+        padding: 10px 25px 10px 42px;
+        background-size: 20px;
+        background-position: 15px center;
+        font-size: 1.1em;
+    }
+
+    hr {
+        margin: 50px -10px;
+    }
+
     /* footer: logo | links | location */
     footer {
         grid-template-columns: 440px 2fr 2.8fr;
-        gap: 30px;
+        gap: 20px;
 
-        background-position: 20px 230px;
+        background-position: 5px 230px;
         background-size: 350px auto;
     }
 
     .footer-links {
         grid-column: 2;
-        margin: 70px 0 0 3px;
+        margin: 60px 110px 0 -40px;
     }
 
     .footer-location {
@@ -521,7 +558,9 @@ footer {
 
     .location-list {
         flex-wrap: nowrap;
-        margin-left: -10px;
+        white-space: nowrap;
+        padding-right: -100px;
+        padding-left: 10px;
     }
 
     .location {

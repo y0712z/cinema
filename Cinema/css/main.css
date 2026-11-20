@@ -47,6 +47,13 @@
 }
 
 /* toogle button */
+.theme-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: flex-start;
+}
+
 .theme-toggle {
   background: none;
   border: 1px solid var(--line);
@@ -56,9 +63,21 @@
   cursor: pointer;
 }
 
+.theme-label {
+    font-family: Arial;
+    color: var(--text);
+    font-size: 1em;
+    font-weight: normal;
+    margin:0;
+}
+
 /* toggle icon */
-.theme-toggle::before { content: "☀️"; }
-:root[data-theme="light"] .theme-toggle::before { content: "🌙"; }
+.theme-toggle::before { 
+    content: "☀️"; 
+}
+:root[data-theme="light"] .theme-toggle::before { 
+    content: "🌙"; 
+}
 
 body {
     background-color: var(--bg);

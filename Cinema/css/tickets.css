@@ -216,6 +216,11 @@
 .skip:hover {
     color:#E6B66C
 }
+
+footer {
+    display: none;
+}
+
 /* desktop ver */
 
 @media (min-width: 1025px) {

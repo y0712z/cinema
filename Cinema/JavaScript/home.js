@@ -28,7 +28,7 @@ document.getElementById("subscribe").onclick = function () {
     var email = document.getElementById("email").value;
     var message = document.getElementById("message");
 
-    if (email === "" || email.indexOf("@") === -1) {
+    if (email == "" || email.indexOf("@") == -1) {
         message.textContent = "Please enter a valid email.";
         message.style.color = "red";
     } else {

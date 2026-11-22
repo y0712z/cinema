@@ -276,7 +276,7 @@ p.grey {
         flex: 1;
         padding: 0;
         height: 40px;
-        border: 3px solid var(--gold-ink);
+        border: 1px solid var(--gold-ink);
         border-radius: 10px;
         cursor:pointer;
         font-size: 12px;
@@ -370,6 +370,7 @@ p.grey {
 }
 
 .halls_section {
+        color:#F7F4EF;
         position: relative;
         isolation: isolate;
         width: 240px;
@@ -416,11 +417,11 @@ p.grey {
         align-self: flex-start;
         margin: 0 0 10px;
         padding: 5px 11px;
-        color: var(--text);
-        background-color: var(--line);
+        color: #F7F4EF;
+        background-color: #fdfcfc40;
         font-weight: bold;
         font-size: 11px;
-        border: 1px solid var(--text);
+        border: 1px solid #F7F4EF;
         border-radius: 99px;
 }
 
@@ -445,7 +446,7 @@ p.grey {
         padding: 5px 10px;
         border-radius: 12px;
         background: rgba(0, 0, 0, 0.6);
-        color: var(--text);
+        color: #F7F4EF;
         font-size: 14px;
         cursor: pointer;
         transition: opacity 0.2s;
@@ -533,17 +534,17 @@ p.grey {
         font-size: 25px;
         margin-top: 12px;
         margin-bottom: 0;
-        color: var(--text);
+        color: #F7F4EF;
 }
 
 .promo-box p {
         margin-bottom: 20px;
-        color: var(--text);
+        color: #F7F4EF;
 }
 
 .promo-button {
         display: inline-block;
-        background-color: var(--text);
+        background-color: #F7F4EF;
         color: black;
         text-decoration: none;
         padding: 14px 22px;
@@ -569,14 +570,15 @@ p.grey {
         width: 100%;
         padding: 13px;
         margin-bottom: 10px;
-        background: var(--muted);
+        color: black;
+        background: #F7F4EF;
         border: 2px solid var(--gold);
         border-radius: 15px;
         font-size: 16px;
         box-sizing: border-box;
 }
 
-.subsribe input:focus {
+.subscribe input:focus {
         outline: none;
         border-color: var(--gold);
 }
@@ -615,9 +617,7 @@ p.grey {
 
         .box {
                 max-width: 560px;
-                min-height: 300px;
                 margin: 20px auto 0;
-                padding: 1.5em;
         }
 
         p.yellow {
@@ -643,11 +643,8 @@ p.grey {
 @media (min-width:1450px) {
 
         .box {
-                float: right;
-                width: 650px;
-                max-width: none;
-                min-height: 400px;
-                margin: -200px 20px 100px 10px;
+                justify-content: flex-start;
+                margin: 20px 0 40px;
         }
 
         p.yellow {

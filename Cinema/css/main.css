@@ -26,6 +26,7 @@
     --muted: #B7B1Bd;
     --line: #fdfcfc40;
     --header-h:90px;
+    --green: green;
     color-scheme: dark;
 }
 
@@ -40,6 +41,7 @@
     --red: #A63A46;
     --muted: #5E5547; 
     --line: #1f1a1440; 
+    --green: green;
     color-scheme: light;
 }
 

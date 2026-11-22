@@ -11,6 +11,8 @@
 
 */
 
+html {scroll-behavior: smooth;}
+
 .slideshow {
         position: relative;
         margin-top: 20px;
@@ -85,54 +87,8 @@ p.grey {
 
 */
 
-.button {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        gap: 15px;
-
-        font-family: Arial, sans-serif;
-        font-size: 1em;
-}
-
-.button a {
-        text-decoration: none;
-}
-
-.yellow-box, 
-.transparent-box { 
-        display: flex; 
-        justify-content: center; 
-        align-items: center;
-
-        width: 180px; 
-        min-height: 50px; 
-        margin: 0;
-        padding: 10px;
-        box-sizing: border-box;
-
-        text-align: center; 
-        border-radius: 15px; 
-}
-
-.yellow-box {
-        background-color: var(--gold);
-}
-
-.yellow-box a {
-        color: var(--gold-ink);
-        font-weight: 600; 
-}
-
-.transparent-box { 
-        border: 2px solid var(--gold); 
-}
-
-.transparent-box a {
-        color: var(--text);
-}
-
-.movies {
+.section,
+.subscribe {
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -142,7 +98,7 @@ p.grey {
     margin: 40px 0 15px;
 }
 
-.movies-header {
+.header {
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
@@ -150,13 +106,13 @@ p.grey {
         gap: 10px;
 }
 
-.movies-info h2 {
+.info h2 {
     margin: 15px 0 10px 15px;
     font-family: Arial, sans-serif;
     font-size: 1.4em;
 }
 
-.movies-info p {
+.info p {
     margin: 0 0 10px 15px;
     color: var(--muted);
     font-family: Arial, sans-serif;
@@ -179,7 +135,7 @@ p.grey {
 }
 
 .more-info:active {
-    color: green;
+    color: var(--green);
 }
 
 /* sort buttons */
@@ -190,6 +146,7 @@ p.grey {
     overflow-x: auto; 
     padding-top: 7px;
     scrollbar-width: none;
+    font-family: Arial, sans-serif;
 }
 
 .tab {
@@ -209,11 +166,47 @@ p.grey {
     border-color: var(--gold);
 }
 
-.nowshowing {
+.box {
         display: flex;
-        gap: 25px;
-        height: 370px;
+        justify-content: center;
+        gap: 20px;
+}
+
+.box_item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 180px;  
+        height: 60px;
+        padding: 15px 20px;
+        box-sizing: border-box;
+
+        color: var(--text);
+        font-family: Arial, sans-serif;
+        font-size: 1em;
+        font-weight: bold;
+        text-decoration: none;
+        white-space: nowrap;
+        border: 2px solid var(--gold); 
+        border-radius: 15px; 
+}
+
+.box_item:hover {
+        background: var(--gold);
+        color: var(--gold-ink);
+}
+
+#movies,
+#halls {
+        scroll-margin-top: 90px;
+}
+
+.nowshowing,
+.comingsoon {
+        display: flex;
+        gap: 30px;
         overflow-x: auto;
+        height: 400px;
         padding: 30px 10px 0 10px;
         scrollbar-width: none;
 }
@@ -221,21 +214,46 @@ p.grey {
 .movie {
         width: 150px;
         flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
         transition: transform 0.3s;
         font-family: Arial, sans-serif;
 }
 
 .movie h5 {
-        margin-top: -10px;
-        margin-bottom: 10px;
+        margin-top: 20px;
+        font-size: 15px;
+        min-height: 2em;
 }
 
-.movie:hover {
+.duration_rating,
+.type_date {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: -15px;
+        margin-right: 5px;
+        font-size: 12px;
+}
+
+.duration_rating .duration,
+.type_date .type {
+        color: var(--muted);
+}
+
+.duration_rating .rating,
+.type_date .date {
+        color: var(--gold);
+}
+
+.movie:hover,
+.halls_section:hover .poster img {
         transform: scale(1.08);
 }
 
 .poster {
         position: relative;
+        flex-shrink: 0;
         aspect-ratio: 2 / 3;
         border-radius: 12px;
         overflow: hidden;
@@ -245,6 +263,340 @@ p.grey {
         height: 100%;
         object-fit: cover;
         display: block;
+}
+
+.movie_buttons {
+        display: flex;
+        gap: 8px;
+        margin-top: auto;
+        margin-bottom: 40px;
+}
+
+.movie_buttons button {
+        flex: 1;
+        padding: 0;
+        height: 40px;
+        border: 3px solid var(--gold-ink);
+        border-radius: 10px;
+        cursor:pointer;
+        font-size: 12px;
+        white-space: nowrap;
+}
+
+.book,
+.cart {
+        position: relative;
+        overflow: hidden;
+        height: 40px;
+        margin: 0 -3.5px;
+        background: var(--gold);
+        color: var(--gold-ink);
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background 0.3s;
+}
+
+.remind:hover,
+.promo-button:hover,
+.subscribe button:hover {
+        background: var(--red);
+}
+
+.book:active,
+.cart:active,
+.remind:active,
+.promo-button:active,
+.subscribe button:active {
+        background: var(--green);
+}
+
+.remind {
+        position: relative;
+        overflow: hidden;
+        height: 40px;
+        margin: 0 -3.5px;
+        background: var(--gold);
+        color: var(--gold-ink);
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background 0.3s;
+}
+
+.book span,
+.cart span {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s ease;
+        pointer-events: none;
+}
+
+.book .icon,
+.cart .icon {
+        transform: translateY(100%); /* waiting below the button */
+
+}
+
+.book .icon img {
+        width: 30px;
+        height: 30px;
+}
+
+.cart .icon img{
+        width: 24px;
+        height: 24px;
+}
+
+.book:hover .text,
+.cart:hover .text {
+        transform: translateY(-100%); /* text slides up and out */
+}
+
+.book:hover .icon,
+.cart:hover .icon {
+        transform: translateY(0); /* icon slides in */
+}
+
+.halls {
+        display: flex;
+        gap: 24px;
+        overflow-x: auto;
+        padding: 20px 10px 25px 10px;
+        scrollbar-width: none;
+}
+
+.halls_section {
+        position: relative;
+        isolation: isolate;
+        width: 240px;
+        height: 350px;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 20px;
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        overflow: hidden;
+        transition: transform 0.3s;
+        font-family: Arial, sans-serif;
+}
+
+.halls_section:hover {
+        border-color: var(--gold);
+}
+
+.halls_section .poster {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        aspect-ratio: auto;
+        border-radius: 0;
+}
+
+.halls_section .poster img,
+.promo-box:hover {
+        transition: 0.6s ease;
+}
+
+.halls_section .poster::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(transparent 30%, rgba(0, 0, 0, .85));
+}
+
+
+.hall_type {
+        align-self: flex-start;
+        margin: 0 0 10px;
+        padding: 5px 11px;
+        color: var(--text);
+        background-color: var(--line);
+        font-weight: bold;
+        font-size: 11px;
+        border: 1px solid var(--text);
+        border-radius: 99px;
+}
+
+.halls_section h2 {
+        margin-top: -5px;
+        margin-bottom: -40px;
+        font-size: 30px;
+        font-weight: 800;
+}
+
+.hall_facilities {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 50px;
+        margin-left: 5px;
+        margin-bottom: -55px;
+}
+
+.hall_facilities h6 {
+        margin: 0;
+        padding: 5px 10px;
+        border-radius: 12px;
+        background: rgba(0, 0, 0, 0.6);
+        color: var(--text);
+        font-size: 14px;
+        cursor: pointer;
+        transition: opacity 0.2s;
+}
+
+.price {
+        display: flex;
+        flex-direction: row;
+        margin-right: auto;
+        gap: 5px;
+}
+
+.price h5 {
+        position: relative;
+        top: 50px;
+        left: 5px;
+        font-size: 13px;
+        font-weight: 500;
+        opacity: 0.8;
+}
+
+.price h4 {
+        position: relative;
+        top: 65px;
+        right: 70px;
+        font-size: 21px;
+}
+
+.hall_button {
+        margin-left: 170px;
+}
+
+.hall_button .book:hover {
+        background-color: var(--red);
+}
+
+
+.hall_button .book:active {
+        background-color: var(--green);
+}
+
+.promo-container {
+        display: flex;
+        gap: 12px;
+        padding: 15px 0;
+        margin: 40px 10px;
+        font-family: Arial, sans-serif;
+        flex-flow: wrap;
+}
+
+
+.promo-box {
+        flex: 1;
+        padding: 15px 15px;
+        border-radius: 25px;
+        margin: 0 -13px 15px -12px;
+        min-width: 300px;
+}
+
+.promo-box:hover {
+        transform: scale(1.05);
+}
+
+.food {
+        background-image: url("../Images/Logo and Icon/promo_food.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right;
+}
+
+.offer {
+        background-image: url("../Images/Logo and Icon/promo_offer.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right;
+}
+
+.category {
+        color: var(--muted);
+        font-weight: none;
+        font-size: 14px;
+}
+
+.promo-box h2 {
+        font-size: 25px;
+        margin-top: 12px;
+        margin-bottom: 0;
+        color: var(--text);
+}
+
+.promo-box p {
+        margin-bottom: 20px;
+        color: var(--text);
+}
+
+.promo-button {
+        display: inline-block;
+        background-color: var(--text);
+        color: black;
+        text-decoration: none;
+        padding: 14px 22px;
+        border-radius: 15px;
+        font-weight: bold;
+}
+
+.title {
+        color: var(--text);
+        text-align: center;
+        font-family: Arial, sans-serif;
+}
+
+.description {
+        color: var(--muted);
+        text-align: center;
+        font-family: Arial, sans-serif;
+        font-size: 15px;
+        margin-top: -15px;
+}
+
+.subscribe input {
+        width: 100%;
+        padding: 13px;
+        margin-bottom: 10px;
+        background: var(--muted);
+        border: 2px solid var(--gold);
+        border-radius: 15px;
+        font-size: 16px;
+        box-sizing: border-box;
+}
+
+.subsribe input:focus {
+        outline: none;
+        border-color: var(--gold);
+}
+
+.subscribe button {
+        width: 100%;
+        padding: 15px 5px;
+        background: var(--gold);
+        border: none;
+        border-radius: 15px;
+        color: var(--gold-ink);
+        font-size: 17px;
+        font-weight: bold;
+        cursor: pointer;
+}
+
+#message {
+        display: block;
+        margin-top: 10px;
+        font-family: Arial, sans-serif;
 }
 
 /* Phone no hover on touch screen */

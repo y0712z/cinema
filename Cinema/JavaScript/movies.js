@@ -2,7 +2,7 @@
 // Movie List
 var nowshowing = [
     { name: "Spider-Man: Brand New Day", type: "Action", duration: "2h 25m", rating:"5.0", image:"../Images/Movies/now_showing/spiderman_poster.jpg"},
-    { name: "Avengers: Doomsday", type: "Action", duration: "2h 45m", rating:"4.7", image:"../Images/Movies/now_showing/avengers.jpg"},
+    { name: "Avengers: Infinity War", type: "Action", duration: "2h 45m", rating:"4.7", image:"../Images/Movies/now_showing/avengers.jpg"},
     { name: "Mikael: Pemburu Dua Alam", type: "Action", duration: "2h", rating:"4.5", image:"../Images/Movies/now_showing/mikael.jpg"},
     { name: "Mission: Impossible-Dead Reckoning", type: "Action", duration: "2h 43m", rating:"4.9", image:"../Images/Movies/now_showing/mission_impossible_poster.jpg"},
     { name: "Inside Out 2", type: "Animation", duration: "1h 36m", rating:"4.6", image:"../Images/Movies/now_showing/inside_out.jpg"},

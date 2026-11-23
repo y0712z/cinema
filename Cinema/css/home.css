@@ -288,7 +288,7 @@ p.grey {
         position: relative;
         overflow: hidden;
         height: 40px;
-        margin: 0 -3.5px;
+        margin: 0 -1.5px;
         background: var(--gold);
         color: var(--gold-ink);
         border: none;

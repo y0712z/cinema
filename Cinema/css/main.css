@@ -46,10 +46,8 @@
 }
 
 /* Logo for light version */
-:root[data-theme="light"] header,
-:root[data-theme="light"] footer {
-    background-image: url("../Images/Logo and Icon/light_logo.svg");
-}
+:root[data-theme="light"] header {
+    background-image: url("../Images/Logo and Icon/light_logo.svg");}
 
 /* toogle button */
 .theme-container {

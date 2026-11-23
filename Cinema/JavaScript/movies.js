@@ -26,7 +26,7 @@ function showNowshowing(type) {
     for (var i = 0; i < nowshowing.length; i++) {
         var m = nowshowing [i];
 
-        if(type === "all" || m.type.toLowerCase() === type) {
+        if(type == "all" || m.type.toLowerCase() == type) {
             html += '<div class="movie">' +
                     '<div class="poster"><img src="' + m.image + '" alt="' + m.name + '"></div>' +
                     '<h5>' + m.name + '</h5>' +

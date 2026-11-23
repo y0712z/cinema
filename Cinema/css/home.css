@@ -5,6 +5,9 @@
     3. Tablet (min-width: 768px)
     4. Desktop (min-width: 1024px)
 */
+:root[data-theme="light"] footer {
+    background-image: url("../Images/Logo and Icon/light_logo.svg");
+}
 
 /*
     1. Box and Text (mobile = base)

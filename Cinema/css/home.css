@@ -20,7 +20,7 @@ html {scroll-behavior: smooth;}
         position: relative;
         margin-top: 20px;
         margin-bottom: 20px;
-        width: 600px;
+        border: 2px solid transparent;
         max-width: 100%;
 }
 
@@ -28,6 +28,7 @@ html {scroll-behavior: smooth;}
         display: flex;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
+        border-radius: 17px;
         scroll-behavior: smooth;
         scrollbar-width: none;
 }
@@ -172,6 +173,7 @@ p.grey {
 .box {
         display: flex;
         justify-content: center;
+        flex-wrap: nowrap;
         gap: 20px;
 }
 
@@ -179,8 +181,8 @@ p.grey {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 180px;  
-        height: 60px;
+        width: 100%;  
+        height: auto;
         padding: 15px 20px;
         box-sizing: border-box;
 
@@ -270,7 +272,6 @@ p.grey {
 
 .movie_buttons {
         display: flex;
-        gap: 8px;
         margin-top: auto;
         margin-bottom: 40px;
 }
@@ -286,8 +287,7 @@ p.grey {
         white-space: nowrap;
 }
 
-.book,
-.cart {
+.book {
         position: relative;
         overflow: hidden;
         height: 40px;
@@ -307,7 +307,6 @@ p.grey {
 }
 
 .book:active,
-.cart:active,
 .remind:active,
 .promo-button:active,
 .subscribe button:active {
@@ -327,8 +326,7 @@ p.grey {
         transition: background 0.3s;
 }
 
-.book span,
-.cart span {
+.book span {
         position: absolute;
         inset: 0;
         display: flex;
@@ -338,8 +336,7 @@ p.grey {
         pointer-events: none;
 }
 
-.book .icon,
-.cart .icon {
+.book .icon {
         transform: translateY(100%); /* waiting below the button */
 
 }
@@ -349,18 +346,11 @@ p.grey {
         height: 30px;
 }
 
-.cart .icon img{
-        width: 24px;
-        height: 24px;
-}
-
-.book:hover .text,
-.cart:hover .text {
+.book:hover .text {
         transform: translateY(-100%); /* text slides up and out */
 }
 
-.book:hover .icon,
-.cart:hover .icon {
+.book:hover .icon {
         transform: translateY(0); /* icon slides in */
 }
 
@@ -493,9 +483,8 @@ p.grey {
 
 .promo-container {
         display: flex;
-        gap: 12px;
-        padding: 15px 0;
-        margin: 40px 10px;
+        gap: 14px;
+        margin: 40px 0 15px;
         font-family: Arial, sans-serif;
         flex-flow: wrap;
 }
@@ -505,8 +494,7 @@ p.grey {
         flex: 1;
         padding: 15px 15px;
         border-radius: 25px;
-        margin: 0 -13px 15px -12px;
-        min-width: 300px;
+        min-width: 290px;
 }
 
 .promo-box:hover {
@@ -520,7 +508,7 @@ p.grey {
         background-position: right;
 }
 
-.offer {
+.prebooking {
         background-image: url("../Images/Logo and Icon/promo_offer.png");
         background-repeat: no-repeat;
         background-size: cover;

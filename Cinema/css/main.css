@@ -13,6 +13,9 @@
     1. Variables and base (mobile first)
 
 */
+html {
+    zoom: 0.94;
+}
 
 /* Dark Theme (Default) */
 :root {
@@ -95,12 +98,10 @@ body {
 }
 
 hr {
-    width: 100vw;
+    width: auto;
     border: none;
     border-top: 0.5px solid var(--line);
-    position: relative;
-    left: 50%;
-    transform: translate(-50%);
+    margin: 0.5em -2em;
 }
 
 /*
@@ -180,7 +181,7 @@ header {
     top: 0;
     left: 0;
     width: 250px;
-    height: 100vh;
+    height: 100%;
     z-index: 9999;
 
     display: flex;
@@ -265,7 +266,7 @@ nav a:active,
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -274,7 +275,7 @@ nav a:active,
 .navbar li {
     display: inline;
     padding: 0;
-    font-size: 15px;
+    font-size: 16px;
     white-space: nowrap;
 }
 
@@ -335,7 +336,7 @@ footer {
     
     background-image: url("../Images/Logo and Icon/dark_logo.svg"); 
     background-repeat: no-repeat;
-    background-position: center 40px; 
+    background-position: center 37px; 
     background-size: 300px auto; 
 }
 
@@ -343,7 +344,6 @@ footer {
 .footer-links {
     grid-column: 1; 
     width: 100%; 
-    margin-left: 20px;
 }
 
 .footer-links ul {
@@ -352,6 +352,8 @@ footer {
     grid-template-rows: repeat(3,auto); 
     grid-auto-flow: column;
     gap: 20px 60px;
+
+    justify-content: center;
 
     list-style: none;
     padding: 0;
@@ -410,7 +412,7 @@ footer {
 footer hr {
     grid-column: 1 / -1;
     width: auto;            
-    margin: 0 -27px;         
+    margin: 0 -30px;         
     left: 0;              
     transform: none;        
     border: none;
@@ -459,7 +461,7 @@ footer hr {
     }
 
     hr {
-        margin: 20px -5px;
+        margin: 20px -1em;
     }
 
     /* footer quick links on the left, locations on the right */
@@ -473,7 +475,7 @@ footer hr {
     }
 
     .footer-links {
-        grid-column: 1;
+        grid-column: 1/-1;
         margin-top: 170px;
         margin-left: 190px;
     }
@@ -593,7 +595,7 @@ footer hr {
     }
 
     hr {
-        margin: 50px -10px;
+        margin: 50px -3em;
     }
 
     /* footer: logo | links | location */

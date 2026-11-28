@@ -1,0 +1,175 @@
+.signin {
+    color: var(--text);
+    font-family: Arial, sans-serif;
+}
+
+.signin * {
+  box-sizing: border-box;
+}
+
+/*page layout*/
+.signin .page {
+     max-width: 1000px;
+     margin: 0 auto;
+}
+
+.signin .hero {
+    display: none;  /*hidden on phones, show on big screen*/
+}
+
+.signin .form_wrapper {
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+.signin .h1 {
+    margin: 0;
+    font-size: 1.7rem;
+}
+
+.signin .subtitle {
+    margin: 4px 0 20px;
+    color: var(--muted);
+}
+
+
+/*Box around the form*/
+.signin .box {
+    background-color: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 22px;
+}
+
+/*circle numbering: steps*/
+.signin .steps {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0 10px;
+}
+
+.signin .step_item {
+  flex: 1;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.signin .step_item p {
+  margin: 6px 0 0;
+}
+
+.signin .circle {
+  width: 32px;
+  height: 32px;
+  margin: 0 auto;
+  border: 2px solid var(--line);
+  border-radius: 50%;
+  line-height: 28px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* js adds these classes to show where user is */
+.signin .circle.active {
+  border-color: var(--gold);
+  color: var(--gold-text);
+}
+
+.signin .circle.done {
+  background-color: var(--gold);
+  border-color: var(--gold);
+  color: var(--gold-ink);
+}
+
+/*progress bar: grey*/
+.signin .progress {
+    height: 8px;
+    margin-bottom: 20px;
+    background-color: var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/*progress bar: fill*/
+.signin .progress_fill {
+    width: 33%;
+    height: 100%;
+    background-color: var(--gold);
+    transition: width 0.4s;
+}
+
+/*form inputs*/
+.signin .step {
+    display: none;
+}
+
+.signin .step.active {
+    display: block;
+}
+
+.signin .label {
+    display: block;
+    margin: 14px 0 6px;
+    font-size: 0.9rem;
+}
+
+.signin .required {
+    color: var(--red);
+}
+
+.signin .input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    color: var(--text);
+    background-color: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+}
+
+.signin .input:focus {
+    outline: none;
+    border-color: var(--gold);
+}
+
+.signin .password {
+    display: flex;
+    gap: 8px;
+}
+
+.signin .show_pass {
+    padding: 0 14px;
+    color: var(--text);
+    background: none;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/*Error message*/
+.signin .error {
+    min-height: 1.2em;
+    margin: 4px 0 0;
+    font-size: 0.85rem;
+    color: var(--red);
+}
+
+.signin .space_between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    font-size: 0.9rem;
+}
+
+
+
+/*for bigger screens (media q)*/
+.signin .form_side {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    padding: 40px;
+}
+

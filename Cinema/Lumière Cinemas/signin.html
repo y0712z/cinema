@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lumière Cinema</title>
+
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../css/signin.css">
+
+        <script src="..//JavaScript/theme.js"></script>
+        <script src="..//JavaScript/main.js" defer></script>
+        <script src="..//JavaScript/signin.js" defer></script>
+    </head>
+
+    <body>
+        <header>
+        <!-- menu button for mobile -->
+        <button id="menu-toggle" type="button" 
+                aria-label="Toggle menu"
+                aria-controls="sidebar"
+                aria-expanded="false">
+            <span class="hamburger"></span>
+        </button>
+
+        <!-- theme toggle for desktop -->
+        <button class = "theme-toggle header-theme-toggle" type="button"
+            aria-label="Toggle dark/light mode"></button>
+
+        <a href="contact.html" class="signupbox signup">SIGN UP</a>
+    </header>
+
+    <!--menu navigation-->
+    <nav class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="movies.html">MOVIES</a></li>
+            <li><a href="halls.html">OUR HALLS</a></li> 
+            <li><a href="food.html">FOOD & DRINKS</a></li>
+            <li><a href="cart.html">CART</a></li>
+            <li><a href="team.html">OUR TEAM</a></li>
+            <div class="theme-container">
+                <li><p class="theme-label">THEME: </p></li>
+                <li><button class="theme-toggle" type="button" 
+                aria-label="Toggle dark/light mode"></button></li>
+            </div>
+        </ul> 
+    </nav>
+    
+    <!--navigation bar-->
+     <nav class="navbar">
+        <ul>
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="movies.html">MOVIES</a></li>
+            <li><a href="halls.html">OUR HALLS</a></li> 
+            <li><a href="food.html">FOOD & DRINKS</a></li>
+            <li class="add-nav"><a href="cart.html">CART</a></li>
+            <li class="add-nav"><a href="team.html">OUR TEAM</a></li>
+        </ul> 
+    </nav>
+
+
+    <main class="signin">
+        <div class="page">
+
+            <!--left side: picture panel-->
+
+
+            <!--right side: form-->
+            <div class="form_side">
+                <div class="form_wrapper">
+
+                    <h1>Create your account</h1>
+                    <p>It takes just 3 quick steps.</p>
+
+                    <!--Numbered circle-->
+                    <div class="steps">
+                            <div class="step_item"><div class="circle active" id="circle1">1</div><p>Contact</p></div>
+                            <div class="step_item"><div class="circle" id="circle2">2</div><p>Password</p></div>
+                            <div class="step_item"><div class="circle" id="circle3">3</div><p>Profile</p></div>
+                    </div>
+
+                    <!--progress bar-->
+                    <div class="progress"><div class="progress_fill" id="progress"></div></div>
+
+                    <!--step 1-->
+                    <div class="step active" id="step1">
+                        <label for="email">Email <span class="required">*</span></label>
+                        <input class="input" type="email" placeholder="name@example.com">
+                        <p class="error"></p>
+
+                        <label for="phone">Phone Number <span class="required">*</span></label>
+                        <input class="input" type="tel" placeholder="0123456789">
+                        <p class="error"></p>
+                    </div>
+
+                    <!--step 2-->
+                    <div class="step" id="step2">
+                        <label for="password">Password <span class="required">*</span></label>
+                        <div class="password">
+                            <input class="input" type="password">
+                            <button class="show_pass" type="button">Show</button>
+                        </div>
+
+                        <label>Comform Password <span class="required">*</span></label>
+                    </div>
+
+                    <!--step 3-->
+                    <div class="step" id="step3">
+                        <label for="username">Username <span class="required">*</span></label>
+                        <input class="input" type="text" placeholder="Username">
+                        <p class="error"></p>
+
+                        <label for="dob">Date of Birth <span class="required">*</span></label>
+                        <input class="input" type="date" placeholder="dd/mm/yyyy">
+                        <p class="error"></p>
+
+                        <div>
+                            <input type="checkbox">
+                            <label for="terms">I agree to the Terms &amp; Services</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </main>
+
+                
+
+   
+
+
+
+    <!--footer-->
+    <footer>
+        <div class="footer-links">
+        <ul>
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="movies.html">MOVIES</a></li>
+            <li><a href="halls.html">OUR HALLS</a></li>
+            <li><a href="food.html">FOOD & DRINKS</a></li>
+            <li><a href="cart.html">CART</a></li>
+            <li><a href="team.html">OUR TEAM</a></li>
+        </ul>
+        </div>
+
+        <div class="footer-location">
+            <h4>OUR LOCATIONS</h4>
+
+        <div class="location-list">
+            <div class="location">
+                <h4>📍Sunway Pyramid</h4>
+                <p>F1.01, Level 1, Sunway Pyramid, 
+                <br> 3, Jalan PJS11/15, Bandar Sunway, 
+                <br> 46150 Petaling Jaya, Selangor, Malaysia
+                </p>
+                
+                <h4>🕒Opening Hours</h4>
+                <p>10 AM - 3 AM</p>
+                <a href="https://maps.app.goo.gl/gASpTRt8vBQXxhzL9"
+                target="_blank">
+                View on Google Maps</a>
+            </div>
+
+            <div class="location">
+                <h4>📍Sunway Square</h4>
+                <p>L1.01, Level 1, Sunway SQ Mall, 
+                <br>Jalan Lagoon Selatan, Bandar Sunway, 
+                <br>47500 Petaling Jaya, Selangor, Malaysia
+                </p>
+                
+                <h4>🕒Opening Hours</h4>
+                <p>10 AM - 3 AM</p>
+                <a href="https://maps.app.goo.gl/UenbkBaVTPTdUcnP8"
+                target="_blank">
+                View on Google Maps</a>
+            </div>    
+        </div>
+        </div>
+
+        <hr>
+        
+         <p class="copyright">
+            &copy; 2026 Lumière Cinema. All rights reserved.
+        </p>
+    </footer>
+
+    </body>
+</html>

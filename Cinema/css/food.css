@@ -99,7 +99,7 @@ main h1 {
 
 .item-bottom .yellowbox {
     display:inline-flex; background-color: var(--gold); align-items:center; text-align:center; padding:15px 25px; gap:8px;
-    color: var(--gold-ink); font-size:1em; font-weight:600; border-radius:15px; margin-bottom:10px; 
+    color: var(--gold-ink); font-size:1em; font-weight:600; border-radius:10px; margin-bottom:10px; 
 }
 
 .item-bottom .yellowbox:hover {
@@ -127,7 +127,7 @@ main h1 {
     margin: 0 auto 15px auto;
     border: 2px solid var(--gold);
     border-radius: 50%;
-    background-color: var(--text);
+    background-color: white;
     background-size: 85%;
     background-position: center;
     background-repeat: no-repeat;
@@ -170,7 +170,7 @@ main h1 {
 .order {
     background-color: var(--surface);
     border-radius: 15px;
-    padding: 25px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

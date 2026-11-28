@@ -26,14 +26,23 @@ show(0);
 // Email Subscribe
 document.getElementById("subscribe").onclick = function () {
     var email = document.getElementById("email").value;
-    var message = document.getElementById("message");
 
-    if (email == "" || email.indexOf("@") == -1) {
-        message.textContent = "Please enter a valid email.";
-        message.style.color = "red";
+    if (!email.includes("@") || !email.includes(".") ) {
+        showPopup(
+            "Invalid Email!",
+            "Please enter a valid email.",
+            "../Images/Logo and Icon/warning_icon.svg",
+            "warning"
+        );
+
     } else {
-        message.textContent = "Thanks for subscribing!";
-        message.style.color = "green";
+        showPopup(
+            "Subscription Sucessful!",
+            "Thanks for subscribing!",
+            "../Images/Logo and Icon/success_icon.svg",
+            "success"
+        );
+        
         document.getElementById("email").value = "";
-    };
-}
+    }
+};

@@ -154,17 +154,66 @@ main h1 {
     font-size: 14px;
 }
 
-/* yellow box */
-.item .yellowbox {
-    padding: 10px 18px;
-    font-size: 15px;
-    margin-bottom: 0;
+.cart_button {
+    display: flex;
 }
 
-.item .yellowbox:hover {
-    background-color: var(--red);
-    color: var(--text);
+.cart_button button {
+        flex: 0 0 140px;
+        padding: 0;
+        width: 140px;
+        height: 40px;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 12px;
+        white-space: nowrap;
 }
+
+.cart {
+        position: relative;
+        overflow: hidden;
+        height: 40px;
+        background: var(--gold);
+        color: var(--gold-ink);
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background 0.3s;
+}
+
+.cart:active {
+        background: var(--green);
+}
+
+.cart span {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s ease;
+        pointer-events: none;
+}
+
+.cart .icon {
+        transform: translateY(100%); /* waiting below the button */
+
+}
+
+.cart .icon img{
+        width: 24px;
+        height: 24px;
+}
+
+.cart:hover .text {
+        transform: translateY(-100%); /* text slides up and out */
+}
+
+.cart:hover .icon {
+        transform: translateY(0); /* icon slides in */
+}
+
+
 
 /* right order summary */
 .order {

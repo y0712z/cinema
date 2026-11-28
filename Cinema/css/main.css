@@ -13,11 +13,14 @@
     1. Variables and base (mobile first)
 
 */
+html {
+    zoom: 0.94;
+}
 
 /* Dark Theme (Default) */
 :root {
     --bg: #101018;
-    --surface: #1A1A1A;
+    --surface: #1C1C27;
     --gold: #E6B66C;
     --gold-text: #caae84;
     --gold-ink: black;
@@ -46,10 +49,8 @@
 }
 
 /* Logo for light version */
-:root[data-theme="light"] header,
-:root[data-theme="light"] footer {
-    background-image: url("../Images/Logo and Icon/light_logo.svg");
-}
+:root[data-theme="light"] header {
+    background-image: url("../Images/Logo and Icon/light_logo.svg");}
 
 /* toogle button */
 .theme-container {
@@ -90,6 +91,112 @@
     background-position: 1px center;
 }
 
+.popup-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+
+        background: rgba(0,0,0,0.7);
+
+        justify-content: center;
+        align-items: center;
+
+        z-index: 20000;
+}
+
+.popup-box {
+        background: var(--bg);
+        color: var(--text);
+        font-family: Arial, sans-serif;
+
+        width: 300px;
+        padding: 35px;
+        border-radius: 15px;
+
+        text-align: center;
+
+        box-shadow: 0 5px 25px rgba(0,0,0,0.4);
+
+        animation: popupAppear 0.3s ease;
+}
+
+.popup-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin: 0 auto;
+}
+
+.popup-icon img {
+    object-fit: contain;
+}
+
+.popup-icon .reminder {
+    background: var(--gold);
+    border-radius: 50%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+.popup-icon img.reminder {
+    width: 45px;
+    height: 45px;
+}
+
+.popup-icon img.warning,
+.popup-icon img.success {
+    width: 75px;
+    height: 75px;
+}
+
+.popup-box h2 {
+    margin-bottom: 15px;
+}
+
+.popup-box p {
+    color: var(--muted);
+    margin-bottom: 20px;
+}
+
+.popup-box .popup_name {
+    color: var(--gold);
+    font-weight: bold;
+}
+
+.popup-box button {
+    width: 100%;
+    padding: 12px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: var(--gold);
+    color: var(--gold-ink);
+
+    cursor: pointer;
+}
+
+.popup-box button:hover {
+    background-color: var(--red);
+}
+
+.popup-box button:active {
+    background-color: var(--green);
+}
+
+
+@keyframes popupAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 body {
     background-color: var(--bg);
     margin: 0;
@@ -97,12 +204,10 @@ body {
 }
 
 hr {
-    width: 100vw;
+    width: auto;
     border: none;
     border-top: 0.5px solid var(--line);
-    position: relative;
-    left: 50%;
-    transform: translate(-50%);
+    margin: 0.5em -2em;
 }
 
 /*
@@ -182,7 +287,7 @@ header {
     top: 0;
     left: 0;
     width: 250px;
-    height: 100vh;
+    height: 100%;
     z-index: 9999;
 
     display: flex;
@@ -267,7 +372,7 @@ nav a:active,
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -276,7 +381,7 @@ nav a:active,
 .navbar li {
     display: inline;
     padding: 0;
-    font-size: 15px;
+    font-size: 16px;
     white-space: nowrap;
 }
 
@@ -337,7 +442,7 @@ footer {
     
     background-image: url("../Images/Logo and Icon/dark_logo.svg"); 
     background-repeat: no-repeat;
-    background-position: center 40px; 
+    background-position: center 37px; 
     background-size: 300px auto; 
 }
 
@@ -345,7 +450,6 @@ footer {
 .footer-links {
     grid-column: 1; 
     width: 100%; 
-    margin-left: 20px;
 }
 
 .footer-links ul {
@@ -354,6 +458,8 @@ footer {
     grid-template-rows: repeat(3,auto); 
     grid-auto-flow: column;
     gap: 20px 60px;
+
+    justify-content: center;
 
     list-style: none;
     padding: 0;
@@ -412,7 +518,7 @@ footer {
 footer hr {
     grid-column: 1 / -1;
     width: auto;            
-    margin: 0 -27px;         
+    margin: 0 -30px;         
     left: 0;              
     transform: none;        
     border: none;
@@ -429,6 +535,54 @@ footer hr {
     font-size: 0.8em;
     text-align: center;   
 }
+
+.scroll-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.scroll-btn {
+    z-index: 5;
+    top: 160px;
+    transform: translateY(-50%);
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 1.5px solid #2E2E3E;
+    border-radius: 50%;
+    background: var(--gold-ink);
+    color: var(--text);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.scroll-btn.prev {
+    left: -10px;
+}
+
+.scroll-btn.next {
+    right: -10px;
+}
+
+.horizontal-scroll {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    height: 400px;
+    padding: 30px 10px 0 10px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.scroll-btn:hover {
+        transform: translateY(-50%) scale(1.15);
+        transition: transform 0.3s ease;
+}
+
+#hall-btn {
+    top: 220px;
+}
+
 
 /*
     7. Tablet (730px and up)
@@ -461,7 +615,7 @@ footer hr {
     }
 
     hr {
-        margin: 20px -5px;
+        margin: 20px -1em;
     }
 
     /* footer quick links on the left, locations on the right */
@@ -475,7 +629,7 @@ footer hr {
     }
 
     .footer-links {
-        grid-column: 1;
+        grid-column: 1/-1;
         margin-top: 170px;
         margin-left: 190px;
     }
@@ -595,7 +749,7 @@ footer hr {
     }
 
     hr {
-        margin: 50px -10px;
+        margin: 50px -3em;
     }
 
     /* footer: logo | links | location */

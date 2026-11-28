@@ -1,16 +1,16 @@
 // Now Showing Movies
 // Movie List
 var nowshowing = [
-    { name: "Spider-Man: Brand New Day", type: "Action", duration: "2h 25m", rating:"5.0", image:"../Images/Movies/now_showing/spiderman_poster.jpg"},
-    { name: "Avengers: Doomsday", type: "Action", duration: "2h 45m", rating:"4.7", image:"../Images/Movies/now_showing/avengers.jpg"},
-    { name: "Mikael: Pemburu Dua Alam", type: "Action", duration: "2h", rating:"4.5", image:"../Images/Movies/now_showing/mikael.jpg"},
-    { name: "Mission: Impossible-Dead Reckoning", type: "Action", duration: "2h 43m", rating:"4.9", image:"../Images/Movies/now_showing/mission_impossible_poster.jpg"},
-    { name: "Inside Out 2", type: "Animation", duration: "1h 36m", rating:"4.6", image:"../Images/Movies/now_showing/inside_out.jpg"},
-    { name: "Minions & Monsters", type: "Animation", duration: "1h 29m", rating:"4.5", image:"../Images/Movies/now_showing/minions.jpg"},
-    { name: "Moana 2", type: "Animation", duration: "1h 40m", rating:"5.0", image:"../Images/Movies/now_showing/moana.jpg"},
-    { name: "Toy Story 5", type: "Animation", duration: "1h 42m", rating:"4.5", image:"../Images/Movies/now_showing/toy_story_poster.jpg"},
-    { name: "Dear You", type: "Drama", duration: "1h 58m", rating:"4.2", image:"../Images/Movies/now_showing/dear_you.jpg"},
-    { name: "Hi, Mom", type: "Drama", duration: "2h 8m", rating:"4.4", image:"../Images/Movies/now_showing/hi_mom.webp"},
+    { name: "Spider-Man: Brand New Day", type: "Action", duration: "2h 25m", rating:"5.0", language:"English", age:"../Images/Logo and Icon/age_p13", image:"../Images/Movies/now_showing/spiderman_poster.jpg"},
+    { name: "Avengers: Infinity War", type: "Action", duration: "2h 45m", rating:"4.7", language:"English", age:"../Images/Logo and Icon/age_p13", image:"../Images/Movies/now_showing/avengers.jpg"},
+    { name: "Mikael: Pemburu Dua Alam", type: "Action", duration: "2h", rating:"4.5", language:"Malay", age:"../Images/Logo and Icon/age_p13", image:"../Images/Movies/now_showing/mikael.jpg"},
+    { name: "Mission: Impossible-Dead Reckoning", type: "Action", duration: "2h 43m", language:"English", age:"../Images/Logo and Icon/age_p13", rating:"4.9", image:"../Images/Movies/now_showing/mission_impossible_poster.jpg"},
+    { name: "Inside Out 2", type: "Animation", duration: "1h 36m", rating:"4.6", language:"English", age:"../Images/Logo and Icon/age_u", image:"../Images/Movies/now_showing/inside_out.jpg"},
+    { name: "Minions & Monsters", type: "Animation", duration: "1h 29m", rating:"4.5", language:"English", age:"../Images/Logo and Icon/age_u", image:"../Images/Movies/now_showing/minions.jpg"},
+    { name: "Moana 2", type: "Animation", duration: "1h 40m", rating:"5.0", language:"English", age:"../Images/Logo and Icon/age_u", image:"../Images/Movies/now_showing/moana.jpg"},
+    { name: "Toy Story 5", type: "Animation", duration: "1h 42m", rating:"4.5", language:"English", age:"../Images/Logo and Icon/age_u", image:"../Images/Movies/now_showing/toy_story_poster.jpg"},
+    { name: "Dear You", type: "Drama", duration: "1h 58m", rating:"4.2", language:"English", age:"../Images/Logo and Icon/age_u", image:"../Images/Movies/now_showing/dear_you.jpg"},
+    { name: "Hi, Mom", type: "Drama", duration: "2h 8m", rating:"4.4", language:"English", age:"../Images/Logo and Icon/age_u", image:"../Images/Movies/now_showing/hi_mom.webp"},
     { name: "My Love", type: "Drama", duration: "2h 25m", rating:"4.6", image:"../Images/Movies/now_showing/my_love.webp"},
     { name: "Sunshine Women's Choir", type: "Drama", duration: "2h 14m", rating:"5.0", image:"../Images/Movies/now_showing/sunshine_women_choir.jpg"},
     { name: "Clayface", type: "Thriller", duration: "1h 50m", rating:"4.8", image:"../Images/Movies/now_showing/clayface.webp"},
@@ -26,7 +26,7 @@ function showNowshowing(type) {
     for (var i = 0; i < nowshowing.length; i++) {
         var m = nowshowing [i];
 
-        if(type === "all" || m.type.toLowerCase() === type) {
+        if(type == "all" || m.type.toLowerCase() == type) {
             html += '<div class="movie">' +
                     '<div class="poster"><img src="' + m.image + '" alt="' + m.name + '"></div>' +
                     '<h5>' + m.name + '</h5>' +
@@ -38,10 +38,6 @@ function showNowshowing(type) {
                         '<button class="book" data-index="' + i + '">' +
                             '<span class="text"><b>Book</b></span>' +
                             '<span class="icon"><img src="../Images/Logo and Icon/ticket_icon.svg"></span>' +
-                        '</button>' +
-                        '<button class="cart" data-index="' + i + '">' +
-                            '<span class="text"><b>Add to Cart</b></span>' +
-                            '<span class="icon"><img src="../Images/Logo and Icon/cart_icon.svg"></span>' +
                         '</button>' +
                     '</div>' +
                     '</div>';
@@ -71,7 +67,6 @@ for (var i = 0; i < tabs.length; i++) {
 showNowshowing("all");
 
 // Book and Cart buttons
-var cart = [];
 
 document.getElementById("movie-list").addEventListener("click", function (e) {
     var btn = e.target.closest("button");
@@ -83,10 +78,6 @@ document.getElementById("movie-list").addEventListener("click", function (e) {
         window.location.href = "booking.html?movie=" + encodeURIComponent(movie.name);
     }
 
-    if (btn.classList.contains("cart")) {
-        cart.push(movie);
-        alert(movie.name + " added to cart!");
-    }
 });
 
 // Coming Soon Movies
@@ -116,7 +107,10 @@ function showComingsoon(type) {
                         '<span class="date">🔔' + m.date + '</span>' +
                         '</h6>' +            
                     '<div class="movie_buttons">' + 
-                        '<button class="remind" data-index="' + i + '"><b>Remind me</b>' + '</button>' +
+                        '<button class="remind" data-index="' + i + '">' + 
+                            '<span class="text"><b>Remind me</b></span>' + 
+                            '<span class="icon"><img src="../Images/Logo and Icon/reminder_icon.svg"></span>' +
+                        '</button>' +
                     '</div>' +
                     '</div>';
 
@@ -139,6 +133,12 @@ document.getElementById("soon-list").addEventListener("click", function (e) {
 
     if (btn.classList.contains("remind")) {
         remind.push(movie);
-        alert("We'll remind you about " + movie.name + "!");
+        showPopup(
+            "Reminder Set!",
+            "We'll remind you about ",
+            "../Images/Logo and Icon/reminder_icon.svg",
+            "reminder",
+            movie.name + "!"
+        );
     }
 });

@@ -47,6 +47,7 @@ function closePopup() {
 }
 
 // horizontal scroll button (left and right)
+document.addEventListener("DOMContentLoaded", function() {
 function setupHorizontalScroll() {
 
     var sections = document.querySelectorAll(".section");
@@ -77,3 +78,4 @@ function setupHorizontalScroll() {
 }
 
 setupHorizontalScroll();
+});

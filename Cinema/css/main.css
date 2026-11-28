@@ -20,7 +20,7 @@ html {
 /* Dark Theme (Default) */
 :root {
     --bg: #101018;
-    --surface: #1A1A1A;
+    --surface: #1C1C27;
     --gold: #E6B66C;
     --gold-text: #caae84;
     --gold-ink: black;
@@ -537,52 +537,51 @@ footer hr {
 }
 
 .scroll-wrapper {
-    display: flex;
     position: relative;
-    align-items: center;
-    gap: 5px;
     width: 100%;
 }
 
 .scroll-btn {
     z-index: 5;
+    top: 160px;
+    transform: translateY(-50%);
     position: absolute;
-    width: 35px;
-    height: 35px;
-    border: 1px solid var(--muted);
+    width: 40px;
+    height: 40px;
+    border: 1.5px solid #2E2E3E;
     border-radius: 50%;
-    background: transparent;
-    color: var(--muted);
+    background: var(--gold-ink);
+    color: var(--text);
     font-size: 16px;
     cursor: pointer;
-    transition: 0.3s;
 }
 
 .scroll-btn.prev {
     left: -10px;
-    top: 130px;
 }
 
 .scroll-btn.next {
     right: -10px;
-    top: 130px;
 }
 
 .horizontal-scroll {
     display: flex;
-    flex: 1;
     gap: 20px;
-    min-width: 0;
     overflow-x: auto;
+    height: 400px;
+    padding: 30px 10px 0 10px;
     scroll-behavior: smooth;
     scrollbar-width: none;
 }
 
 .scroll-btn:hover {
-        transform: scale(1.09);
+        transform: translateY(-50%) scale(1.15);
         transition: transform 0.3s ease;
 }
 
+#hall-btn {
+    top: 220px;
+}
 
 
 /*

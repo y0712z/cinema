@@ -287,7 +287,8 @@ p.grey {
         white-space: nowrap;
 }
 
-.book {
+.book,
+.remind {
         position: relative;
         overflow: hidden;
         height: 40px;
@@ -300,7 +301,6 @@ p.grey {
         transition: background 0.3s;
 }
 
-.remind:hover,
 .promo-button:hover,
 .subscribe button:hover {
         background: var(--red);
@@ -313,20 +313,8 @@ p.grey {
         background: var(--green);
 }
 
-.remind {
-        position: relative;
-        overflow: hidden;
-        height: 40px;
-        margin: 0 -3.5px;
-        background: var(--gold);
-        color: var(--gold-ink);
-        border: none;
-        border-radius: 6px;
-        cursor: pointer;
-        transition: background 0.3s;
-}
-
-.book span {
+.book span,
+.remind span {
         position: absolute;
         inset: 0;
         display: flex;
@@ -336,7 +324,8 @@ p.grey {
         pointer-events: none;
 }
 
-.book .icon {
+.book .icon,
+.remind .icon {
         transform: translateY(100%); /* waiting below the button */
 
 }
@@ -346,11 +335,18 @@ p.grey {
         height: 30px;
 }
 
-.book:hover .text {
+.remind .icon img {
+        width: 23px;
+        height: 23px;
+}
+
+.book:hover .text,
+.remind:hover .text {
         transform: translateY(-100%); /* text slides up and out */
 }
 
-.book:hover .icon {
+.book:hover .icon,
+.remind:hover .icon {
         transform: translateY(0); /* icon slides in */
 }
 
@@ -591,6 +587,7 @@ p.grey {
         margin-top: 10px;
         font-family: Arial, sans-serif;
 }
+
 
 /* Phone no hover on touch screen */
 @media (hover: none) {

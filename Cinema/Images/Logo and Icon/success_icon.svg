@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-labelledby="title">
+  <title id="title">Success</title>
+  <circle cx="306" cy="306" r="258" fill="#009b0b"/>
+  <path d="M155 316l98 98L457 210" fill="none" stroke="#fff" stroke-width="78" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -91,6 +91,112 @@ html {
     background-position: 1px center;
 }
 
+.popup-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+
+        background: rgba(0,0,0,0.7);
+
+        justify-content: center;
+        align-items: center;
+
+        z-index: 20000;
+}
+
+.popup-box {
+        background: var(--bg);
+        color: var(--text);
+        font-family: Arial, sans-serif;
+
+        width: 300px;
+        padding: 35px;
+        border-radius: 15px;
+
+        text-align: center;
+
+        box-shadow: 0 5px 25px rgba(0,0,0,0.4);
+
+        animation: popupAppear 0.3s ease;
+}
+
+.popup-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin: 0 auto;
+}
+
+.popup-icon img {
+    object-fit: contain;
+}
+
+.popup-icon .reminder {
+    background: var(--gold);
+    border-radius: 50%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+.popup-icon img.reminder {
+    width: 45px;
+    height: 45px;
+}
+
+.popup-icon img.warning,
+.popup-icon img.success {
+    width: 75px;
+    height: 75px;
+}
+
+.popup-box h2 {
+    margin-bottom: 15px;
+}
+
+.popup-box p {
+    color: var(--muted);
+    margin-bottom: 20px;
+}
+
+.popup-box .popup_name {
+    color: var(--gold);
+    font-weight: bold;
+}
+
+.popup-box button {
+    width: 100%;
+    padding: 12px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: var(--gold);
+    color: var(--gold-ink);
+
+    cursor: pointer;
+}
+
+.popup-box button:hover {
+    background-color: var(--red);
+}
+
+.popup-box button:active {
+    background-color: var(--green);
+}
+
+
+@keyframes popupAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 body {
     background-color: var(--bg);
     margin: 0;

@@ -79,10 +79,6 @@ document.getElementById("movie-list").addEventListener("click", function (e) {
         window.location.href = "booking.html?movie=" + encodeURIComponent(movie.name);
     }
 
-    if (btn.classList.contains("cart")) {
-        cart.push(movie);
-        alert(movie.name + " added to cart!");
-    }
 });
 
 // Coming Soon Movies
@@ -112,7 +108,10 @@ function showComingsoon(type) {
                         '<span class="date">🔔' + m.date + '</span>' +
                         '</h6>' +            
                     '<div class="movie_buttons">' + 
-                        '<button class="remind" data-index="' + i + '"><b>Remind me</b>' + '</button>' +
+                        '<button class="remind" data-index="' + i + '">' + 
+                            '<span class="text"><b>Remind me</b></span>' + 
+                            '<span class="icon"><img src="../Images/Logo and Icon/reminder_icon.svg"></span>' +
+                        '</button>' +
                     '</div>' +
                     '</div>';
 
@@ -135,6 +134,12 @@ document.getElementById("soon-list").addEventListener("click", function (e) {
 
     if (btn.classList.contains("remind")) {
         remind.push(movie);
-        alert("We'll remind you about " + movie.name + "!");
+        showPopup(
+            "Reminder Set!",
+            "We'll remind you about ",
+            "../Images/Logo and Icon/reminder_icon.svg",
+            "reminder",
+            movie.name + "!"
+        );
     }
 });

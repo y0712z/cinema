@@ -536,6 +536,55 @@ footer hr {
     text-align: center;   
 }
 
+.scroll-wrapper {
+    display: flex;
+    position: relative;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+}
+
+.scroll-btn {
+    z-index: 5;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    border: 1px solid var(--muted);
+    border-radius: 50%;
+    background: transparent;
+    color: var(--muted);
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.scroll-btn.prev {
+    left: -10px;
+    top: 130px;
+}
+
+.scroll-btn.next {
+    right: -10px;
+    top: 130px;
+}
+
+.horizontal-scroll {
+    display: flex;
+    flex: 1;
+    gap: 20px;
+    min-width: 0;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.scroll-btn:hover {
+        transform: scale(1.09);
+        transition: transform 0.3s ease;
+}
+
+
+
 /*
     7. Tablet (730px and up)
 

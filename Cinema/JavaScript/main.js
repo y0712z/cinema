@@ -45,3 +45,35 @@ function closePopup() {
     document.getElementById("customPopup").style.display = "none";
 
 }
+
+// horizontal scroll button (left and right)
+function setupHorizontalScroll() {
+
+    var sections = document.querySelectorAll(".section");
+
+    sections.forEach(function(section) {
+
+        var container = section.querySelector(".horizontal-scroll");
+        var next = section.querySelector(".next");
+        var prev = section.querySelector(".prev");
+
+        if (!container || !next || !prev) return;
+
+        next.onclick = function() {
+            container.scrollBy({
+                left: 300,
+                behavior: "smooth"
+            });
+        };
+
+        prev.onclick = function() {
+            container.scrollBy({
+                left: -300,
+                behavior: "smooth"
+            });
+        };
+
+    });
+}
+
+setupHorizontalScroll();

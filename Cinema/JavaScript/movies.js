@@ -67,7 +67,6 @@ for (var i = 0; i < tabs.length; i++) {
 showNowshowing("all");
 
 // Book and Cart buttons
-var cart = [];
 
 document.getElementById("movie-list").addEventListener("click", function (e) {
     var btn = e.target.closest("button");
